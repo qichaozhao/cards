@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: static_page
 title: About
 permalink: /about/
 img: about.jpg
