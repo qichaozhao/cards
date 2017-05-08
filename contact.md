@@ -4,7 +4,4 @@ title: Contact
 permalink: /contact/
 ---
 
-
-Insert your contact details or a contact form here.
-
-Read [How to create a form in Jekyll site](http://blog.webjeda.com/jekyll-contact-form/){: target="_blank"} to implement using formspree.
+If for any reason you would actually like to contact me, please reach out via qczhao@gmail.com, or my [LinkedIn](https://www.linkedin.com/in/qichao-zhao-83262820/){: target="_blank"}.
