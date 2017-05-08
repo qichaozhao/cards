@@ -20,8 +20,8 @@ default-image: webjeda-logo-big.jpg # If there is no featured image in a post th
 #footer
 built-by: webjeda
 copyright:
-   name: webjeda
-   link: 'http://blog.webjeda.com'
+   name: Qichao Zhao
+   link: 'https://qichaozhao.github.io'
 
 # Build settings
 markdown: kramdown
@@ -36,7 +36,7 @@ analytics: UA-83979019-1
 disqus-shortname: catbrainblog
 
 #social
-facebook: http://facebook.com/qczhao
+linkedin: https://www.linkedin.com/in/qichao-zhao-83262820/
 quora: http://quora.com/profile/Qichao-George-Zhao
 twitter: http://twitter.com/@qczhao1989
 github: http://github.com/qichaozhao
