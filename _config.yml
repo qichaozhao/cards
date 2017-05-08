@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: qzds | George Zhao
+title: qzds | Qichao Zhao
 email: qczhao@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
  Just another data science blog. 
@@ -33,7 +33,7 @@ paginate_path: /page:num/
 analytics: UA-83979019-1
 
 # Comments
-disqus-shortname: catbrainblog
+disqus-shortname: qzds
 
 #social
 linkedin: https://www.linkedin.com/in/qichao-zhao-83262820/
