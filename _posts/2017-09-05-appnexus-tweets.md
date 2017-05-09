@@ -40,7 +40,7 @@ CREATE TABLE `tweet_log` (
 ```
 
 4. Set up a `conf.json` file with your API Keys and database credential information.
-5. Clone the script down from my repo (TBD), replace the keywords and so on with whatever you're interested in and run!
+5. Clone the script down from my [repo](https://github.com/qichaozhao/apn-summit-twitter), replace the keywords and so on with whatever you're interested in and run!
 
 ## Visualising the Data
 
@@ -79,5 +79,9 @@ The day after, on the 5th, we see some follow on activity, mainly echoing the ne
 My favourite hour was `2015-05-07 03`, where there were 2 tweets, and the top 3 words were: `signs`, `favourable` and `delightful`.
 
 I wonder if that was perhaps one of our execs after a weeks work well done. :)
+
+---
+
+For full code and notebooks, see the repository [here](https://github.com/qichaozhao/apn-summit-twitter).
 
 -qz
