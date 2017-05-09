@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Capture & Visualise Tweets"
-date:   2017-05-09 22:00:00 +0000
+title:	"Capture & Visualise Tweets"
+date:	2017-05-09 22:00:00 +0000
 img:	2017-05-09-title-img.png
 categories: [dataviz, analysis]
 ---
@@ -65,6 +65,7 @@ You can find the full notebook in the github repository.
     });
 });
 </script>
+
 
 You can see that there is one major peak and two minor peaks.
 
