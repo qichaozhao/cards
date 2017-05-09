@@ -2,7 +2,7 @@
 layout: post
 title:  "Capture & Visualise Tweets"
 date:   2017-05-09 22:00:00 +0000
-img: image-1.png
+img:	2017-05-09-title-img.png
 categories: [dataviz, analysis]
 ---
 
