@@ -65,6 +65,7 @@ You can find the full notebook in the github repository.
     });
 });
 </script>
+<br>
 
 
 You can see that there is one major peak and two minor peaks.
