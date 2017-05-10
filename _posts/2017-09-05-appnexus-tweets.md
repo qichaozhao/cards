@@ -78,9 +78,9 @@ It is also worth noting that the various trending topics per hour tended to mirr
 
 The day after, on the 5th, we see some follow on activity, mainly echoing the news from the previous two days.
 
-My favourite hour was `2015-05-07 03`, where there were 2 tweets, and the top 3 words were: `signs`, `favourable` and `delightful`.
+My favourite hour was `2015-05-07 03`, where there were 2 tweets, and the top 3 words were: `signs`, `favorite` and `delightful`.
 
-I wonder if that was perhaps one of our execs after a weeks work well done. :)
+I wonder if that was perhaps one of our execs, relaxing with some wine and shooting the twitter breeze after a weeks work well done. :)
 
 ---
 
