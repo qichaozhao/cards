@@ -53,7 +53,7 @@ So, now we have a baseline, where do we go from here?
 
 Well, from my own experiences, I feel that optimising code generally falls into 3 categories, which I'm going to list in order of potential gains.
 
-1. Code Design - The first thing to consider is always the design of the code. A few examples things to think about are:
+1. Code Design - The first thing to consider is always the design of the code. A few example things to think about are:
   - Unnecessary code - whichever code is being repeated should be pared back to contain only the minimum possible number of commands. The rest should be moved to be outside of the loop.
   - Vectorisation - if we can re-write our code to be a vector operation rather than a loop, it'll usually run a whole lot faster. Mainly because pandas has very efficient vectorised implementations.
   - Memoisation - can we make use of a cache to avoid having to re-calculate values?
@@ -200,7 +200,7 @@ We can see that parallelisation works pretty well! Giving us an increase of **ï½
 
 We can improve things even further by stacking our parallel code with our Cython function (but this doesn't work with Numba due to the just-in-time compilation scheme that is used). The code to do this is:
 
-```
+```python
 # Running our Cython implementation with multiprocessing
 import pyximport
 pyximport.install()
