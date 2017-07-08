@@ -19,7 +19,7 @@ Due to length, it will be a two parter. In this part, I will cover how something
 I'm not ashamed to admit it, but I have, now and again, used a calculator app for 1+1 (y'know, just to make sure. Those pesky numbers can be pesky). So, let us use that as our example. We are (I hope) all at least passingly familiar with how we might use a calculator app for 1+1.
 
 <p align="center">
-  <img src="20170706/fig_1_calculator.png"><br />
+  <img src="/images/20170706/fig_1_calculator.png"><br />
   <b>Fig 1: How to be as insecure in your math skills as me.</b>
 </p>
 
@@ -28,7 +28,7 @@ Now, after we use this UI and click the calculate button, what's going on? Well,
 In Python, my language of choice, the code that gets run looks pretty much the same as using the calculator (except, you know, more hacker-y colours and fonts that look *way* ~~cooler~~ geekier).
 
 <p align="center">
-    <img src="20170706/fig_2_python.png"><br />
+    <img src="/images/20170706/fig_2_python.png"><br />
     <b>Fig 2: How to be insecure in your math skills, but in a geekier way.</b>
 </p>
 
