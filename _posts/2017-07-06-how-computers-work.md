@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How Computers Work (no, really!) - Part 1"
+title:  "How Computers Work - Part 1"
 date: 2017-07-06 21:00:00 +0000
 categories: tutorial computers
 img: 20170706/title.jpg
