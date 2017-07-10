@@ -62,7 +62,7 @@ Not very human readable and not quite machine readable either... what does this 
 7 RETURN_VALUE
 ```
 
-So - this seems to make sense - the instruction starting at byte 0 loads a variable, the instruction starting at byte 3 loads another variable. Then they are added together, and returned.
+So - this seems to make sense - the instruction starting at byte 0 loads a variable (from memory position 0), the instruction starting at byte 3 loads another variable (from memory position 1). Then they are added together, and returned.
 
 But this is pretty much the same thing as what we wrote in the high level language, and yet it isn't executable on the machine, so...why do we even have this?
 
