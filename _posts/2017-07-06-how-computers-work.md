@@ -123,4 +123,4 @@ This, I shall tackle in the the next part!
 
 ----
 
-ps. I am in these matters an amateur trying to make sense of things as best I can, that means that 1. I cannot guarantee that everything will be 100% technically correct, and 2. I welcome any comments to point out any innaccuracies!
+ps. I am in these matters an amateur trying to make sense of things as best I can, that means that 1. I cannot guarantee that everything will be 100% technically correct, and 2. I welcome any comments to point out any inaccuracies!
