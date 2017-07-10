@@ -91,7 +91,7 @@ A, DEC 1    0000 0000 0000 0001     /Decimal operand (set A = 1)
 B, DEC 1    0000 0000 0000 0001     /Decimal operand (set B = 1)
 C, DEC 0    0000 0000 0000 0000     /Sum stored in location C (initialise to 0)
 LDA A       0010 0001 0000 0100     /Load operand from location A
-ADD B       0001 0001 0000 0101     /Add operation form location B
+ADD B       0001 0001 0000 0101     /Add operation from location B
 STA C       0011 0001 0000 0110     /Store sum in location C
 HLT         0111 0000 0000 0001     /Halt computer
 END
