@@ -122,7 +122,7 @@ In order to make more than 1-bit calculations work, our "Half Adder" circuit nee
 
 So, how does chaining a bunch of Full Adders together work? It's simpler than you think.
 
-Remember the process of (long addition)[http://www.mathematics-monster.com/lessons/long_addition.html], where we started by working from the rightmost digits, calculating the sum and carry, then moving onto the tens, calculating the sum and carry taking into account any previous carry, and so on?
+Remember the process of [long addition](http://www.mathematics-monster.com/lessons/long_addition.html), where we started by working from the rightmost digits, calculating the sum and carry, then moving onto the tens, calculating the sum and carry taking into account any previous carry, and so on?
 
 Well, that's it.
 
@@ -145,7 +145,7 @@ From the diagram above, we can see that the CPU is comprised not just of an ALU,
 
 Remember we were talking in the previous post about instruction sets? This is why. The Control Unit has implemented these instruction sets at a hardware level (e.g. transistors on a circuit board), so that if you pass it the instruction 0010 0001 0000 0100, the circuit will perform the `LDA` operation from Memory Location A.
 
-And finally, we have memory - again, these are nothing but logic gate designs translated into transistors on a circuit board (see (here)[https://en.wikipedia.org/wiki/Memory_cell_(binary)] for an overview).
+And finally, we have memory - again, these are nothing but logic gate designs translated into transistors on a circuit board (see [here](https://en.wikipedia.org/wiki/Memory_cell_(binary)) for an overview).
 
 # And We're Done!
 
