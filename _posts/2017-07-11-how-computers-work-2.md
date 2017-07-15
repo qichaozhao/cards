@@ -25,7 +25,7 @@ Boolean algebra concerns itself with combining two states, True (1) and False (0
 The most basic example of Boolean algebra in action is the `AND` gate.
 
 <p align="center">
-  <img src="/images/20170711/fig_1_and_gate.png"><br />
+  <img src="/images/20170711/fig_1_and_gate.png" width="400"><br />
   <b>Fig 1: AND Gate</b>
 </p>
 
