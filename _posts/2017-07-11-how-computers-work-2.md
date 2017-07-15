@@ -116,7 +116,7 @@ Great as all that might be, we quickly realise that having a 1-bit calculator is
 In order to make more than 1-bit calculations work, our "Half Adder" circuit needs to be modified into a "Full Adder" circuit. The only difference is that th eFull Adder will be able to take 3 inputs - our two bits to be added, and a carry-in value. This lets us chain a whole bunch of Full Adders together to make calculations on numbers with many bits.
 
 <p align="center">
-  <img src="/images/20170711/fig__bit_adder.png"><br />
+  <img src="/images/20170711/fig_7_8_bit_adder.png"><br />
   <b>Fig 7: Eight adders chained together.</b>
 </p>
 
