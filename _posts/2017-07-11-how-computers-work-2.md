@@ -143,7 +143,7 @@ The one quirk of Von Neumann Architecture that is both good and bad is the singl
 
 From the diagram above, we can see that the CPU is comprised not just of an ALU, but also a Control Unit - if we want to drill down into what the control unit is comprised of, it would again be a whole bunch of transistors (and other components) arranged in such as way as to implement logic gates, which are the representation of what we require the Control Unit to do - which is, namely, to accept instructions from the input device, read and write to memory as required, send computations to the ALU and receive results, and send outputs to the output device.
 
-Remember we were talking in the previous post about instruction sets? This is why. The Control Unit has implemented these instruction sets at a hardware level (e.g. transistors on a circuit board), so that if you pass it the instruction 0010 0001 0000 0100, the circuit will perform the `LDA` operation from Memory Location A.
+Remember we were talking in the previous post about instruction sets? This is why. The Control Unit has implemented these instruction sets at a hardware level (e.g. transistors on a circuit board), so that if you pass it the instruction `0010 0001 0000 0100`, the circuit will perform the `LDA` operation from Memory Location A.
 
 And finally, we have memory - again, these are nothing but logic gate designs translated into transistors on a circuit board (see [here](https://en.wikipedia.org/wiki/Memory_cell_(binary)) for an overview).
 
