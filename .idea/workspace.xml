@@ -69,8 +69,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-02-10-authentication-proxy.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="331">
-                <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <first_editor relative-caret-position="410">
+                <caret line="51" column="243" lean-forward="true" selection-start-line="51" selection-start-column="243" selection-end-line="51" selection-end-column="243" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -384,8 +384,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-02-10-authentication-proxy.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="331">
-            <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <first_editor relative-caret-position="410">
+            <caret line="51" column="243" lean-forward="true" selection-start-line="51" selection-start-column="243" selection-end-line="51" selection-end-column="243" />
             <folding />
           </first_editor>
           <second_editor />

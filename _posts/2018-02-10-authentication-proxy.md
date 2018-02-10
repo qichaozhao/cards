@@ -53,10 +53,10 @@ Unfortunately, Kerberos is a bit of a trickier beast to tackle, and through ~~ho
 
 The main problem to dealing with Kerberos authentication is that on a Windows environment, Microsoft has built their own implementation of the Kerberos authentication scheme, exposing an API called MS-SSPI for fetching Kerberos tickets. This is compared to the otherwise standard GSSAPI which the standard MIT implementation uses.
 
-After really searching hard to find a full solution (most I found didn't work at all, and the working one did not support HTTPS requests (and was written in C#, eugh)) and failing, I had to end up rolling my own, which I did (and learned some Go in the process).
+After really searching hard to find a full solution (most I found didn't work at all, and the working one did not support HTTPS requests (and was written in C#, eugh)) and failing, I was left with no choice but to roll my own, which I did (and learned some Go in the process).
 
-I hope this will help some other poor souls out there who are in the same boat as me. [https://github.com/qichaozhao/authentication-proxy](https://github.com/qichaozhao/authentication-proxy).
+I hope this will help some other poor souls out there who are in the same boat as me. [https://github.com/qichaozhao/authentication-proxy](https://github.com/qichaozhao/authentication-proxy)
 
-Also, if you want to talk to me about TCP, TLS Handshakes and Certificates, Kerberos, the net/http module in Go, anything about proxies, or how amazing libcurl is, I'm good for it now. :P
+Also, if you want to talk to me about TCP, TLS Handshakes and Certificates, Kerberos, the `net/http` module in Go, anything about proxies, or how amazing libcurl is, I'm good for it now. :P
 
 -qz
