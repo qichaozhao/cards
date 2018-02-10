@@ -6,17 +6,19 @@ categories: open-source software
 img: 20180210/title.jpg
 ---
 
-# Death by Proxy
+tl:dr; Corporate proxies suck, I made a thing based on other things to make it suck less: [https://github.com/qichaozhao/authentication-proxy](https://github.com/qichaozhao/authentication-proxy)
+
+------
 
 I recently started a new job, in a completely new country. I've so far been at the company for just about a week.
 
-It has been interesting, and I think will continue to be interesting, to observe and feel the impact of different data science maturity levels, as well as the general organisational mindset when it comes to data. I will definitely be writing about this in future posts.
+It has been interesting, and I think will continue to be interesting, to observe and feel the impact of different data science maturity levels, as well as the general organisational mindset when it comes to data. There are stark differences between this new job and the last one I held, and I will definitely be writing about this in future posts.
 
- Having come from an online software platform company, where technology access was laissez-faire and a massive amount of freedoms were enjoyed, it has been frustrating to say the least to deal with a legacy corporation's policies: locked down PCs with no administrator access, no easy access to *nix based compute resources (I have always felt sorry for people who had no choice but to use Cygwin...now I'm one of those people TT), but by far the worst thing is an overly restrictive corporate proxy.
+ Having come from an online software platform company, where technology access was laissez-faire and a massive amount of freedoms were enjoyed, it has been frustrating to say the least to deal with a legacy corporation's policies: locked down PCs with no administrator privileges (IT has to approve every software install!), no easy access to *nix based compute resources (I have always felt sorry for people who had no choice but to use Cygwin...now I'm one of those people TT), but by far the worst thing is an overly restrictive corporate proxy.
  
  I understand the reasoning of corporate proxies in general, but not when they break pretty much every tool I use as a data scientist on a daily basis. Let's go through the list:
 
- - jupyter notebooks 
+ - Jupyter Notebooks 
  - pip
  - condas
  - git
@@ -31,6 +33,8 @@ It has been interesting, and I think will continue to be interesting, to observe
  1. A badly configured PAC (Proxy Auto Configuration) file. 
  2. Only allowing a Kerberos authentication.
  
+## PACs
+ 
  What's a PAC? I hear you ask. Well, when you set up your internet proxy settings, there's generally an option to "auto-configure" by linking to a PAC file. This file is just some javascript and contains essentially a bunch of "if-else" rules for assigning proxy endpoints based on the request being sent.
  
  Usually, internal company requests will be routed directly, and only external requests get assigned to a proxy endpoint.
@@ -38,6 +42,8 @@ It has been interesting, and I think will continue to be interesting, to observe
  However, for whatever reason in this PAC file corporate IT had not properly specified settings for localhost (or 127.0.0.1), which leads to jupyter notebooks breaking, as when you open it in your browser, the localhost requests that the browser makes get proxied and therefore cannot connect successfully to the kernel.
  
  This was easily rectified, which gave me jupyter notebooks back, but the second issue was a bit a trickier to tackle.
+ 
+## Kerberos
  
 In a corporate environment, proxies can generally be authenticated to in 3 ways: Basic, NTLM and Kerberos, usually you would send a proxy connect request that allows failover to any one of the 3 methods if it doesn't work (the Proxy-Negotiate method), however, for security reasons all but Kerberos authentication had been disabled on this corporate proxy.
 
@@ -49,7 +55,7 @@ The main problem to dealing with Kerberos authentication is that on a Windows en
 
 After really searching hard to find a full solution (most I found didn't work at all, and the working one did not support HTTPS requests (and was written in C#, eugh)) and failing, I had to end up rolling my own, which I did (and learned some Go in the process).
 
-I hope this will help some other poor souls out there who are in the same boat as me. [https://github.com/qichaozhao/authentication-proxy].
+I hope this will help some other poor souls out there who are in the same boat as me. [https://github.com/qichaozhao/authentication-proxy](https://github.com/qichaozhao/authentication-proxy).
 
 Also, if you want to talk to me about TCP, TLS Handshakes and Certificates, Kerberos, the net/http module in Go, anything about proxies, or how amazing libcurl is, I'm good for it now. :P
 
