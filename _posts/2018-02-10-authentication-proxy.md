@@ -6,7 +6,7 @@ categories: open-source software
 img: 20180210/title.jpg
 ---
 
-tl:dr; Corporate proxies suck, I made a thing based on other things to make it suck less: [https://github.com/qichaozhao/authentication-proxy](https://github.com/qichaozhao/authentication-proxy)
+tl:dr; Corporate proxies suck, I made a thing based on other things to make it suck less: [https://github.com/qichaozhao/win-auth-proxy](https://github.com/qichaozhao/win-auth-proxy)
 
 ------
 
@@ -55,7 +55,7 @@ The main problem to dealing with Kerberos authentication is that on a Windows en
 
 After really searching hard to find a full solution (most I found didn't work at all, and the working one did not support HTTPS requests (and was written in C#, eugh)) and failing, I was left with no choice but to roll my own, which I did (and learned some Go in the process).
 
-I hope this will help some other poor souls out there who are in the same boat as me. [https://github.com/qichaozhao/authentication-proxy](https://github.com/qichaozhao/authentication-proxy)
+I hope this will help some other poor souls out there who are in the same boat as me. [https://github.com/qichaozhao/win-auth-proxy](https://github.com/qichaozhao/win-auth-proxy)
 
 Also, if you want to talk to me about TCP, TLS Handshakes and Certificates, Kerberos, the `net/http` module in Go, anything about proxies, or how amazing libcurl is, I'm good for it now. :P
 
