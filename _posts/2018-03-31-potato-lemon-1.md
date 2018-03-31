@@ -18,7 +18,7 @@ Over the next series of posts, I will work through the math behind Neural Networ
 
 I'm making the assumption that anyone who is reading this blog at least has a passing familiarity with Neural Networks and what they are conceptually speaking, so I won't cover that in detail.
 
-For this first post, we focus on how we can implement a single artifical neuron, which collects a bunch of signals and has some sort of activation function that decides whether it fires a signal onwards or not.
+For this first post, we focus on how we can implement the activation function of an artifical neuron, which decides whether it fires or not.
 
 Without further ado, let us begin.
 
