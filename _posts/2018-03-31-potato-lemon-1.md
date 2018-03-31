@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a Neural Network Library"
-date: 2018-03-31 09:00:00 +0000
+date: 2018-03-31 03:00:00 +0000
 categories: open-source software
 img: 20180331/title.jpg
 ---
@@ -14,7 +14,7 @@ Since I was about to move my life halfway across the world, I banged out the ent
 
 However, as they say: if you really want test your understanding of something, you should try and teach it. So now that we are several months down the line and a lot of the implementation details have become somewhat fuzzy to me, I'm going to give this exercise a go in the hopes that it will help me retain this information better (and maybe help you, dear reader, to learn something new!).
 
-Over the next series of posts, I will work through the math behind Neural Networks, and build it into a functioning Neural Network library with python (in the vein of a Keras or a Tensorflow or a pyTorch except much shittier).
+Over the next series of posts, I will work through the math behind Neural Networks, and build it into a functioning Neural Network library (which I'm calling potatolemon) with python (in the vein of a Keras or a Tensorflow or a pyTorch except much shittier).
 
 I'm making the assumption that anyone who is reading this blog at least has a passing familiarity with Neural Networks and what they are conceptually speaking, so I won't cover that in detail.
 
@@ -68,7 +68,7 @@ def sigmoid(z):
     """
     This function implements the logistic function and returns the result. It can operate on vectors.
 
-    :param z: A vector of dimension (m, 1)
+    :param z: A scalar or vector (array of dimension (m, 1))
     :return: sigmoid(input)
     """
 
@@ -79,6 +79,6 @@ Note that `sigmoid` is just another name for the logistic function, and here we 
 
 So with the activation function in place, we have half of our Artifical Neuron already. The other half involves the collection of an arbitrary number of inputs to feed into the activation function.
 
-I will talk about this in the next post!
+I will talk about this in the next post! In the meantime, you can find the code I've written thus far, all 10 lines of it, at: [https://github.com/qichaozhao/potatolemon](https://github.com/qichaozhao/potatolemon)
 
 -qz
