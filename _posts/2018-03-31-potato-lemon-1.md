@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a Neural Network Library"
+title: "Potatolemon - Logistic Activation Function"
 date: 2018-03-31 07:00:00 +0000
 categories: open-source software
 img: 20180331/title.jpg
