@@ -6,11 +6,13 @@ categories: open-source software
 img: 20180415/title.png
 ---
 
-# Previously on Potatolemon...
+### Previously on Potatolemon...
 
 1. [Logistic Activation Function](https://qichaozhao.github.io/potato-lemon-1/)
 
-# Neuron Weights
+---
+
+# Neuron Weights 
 
 Previously, we talked about how the Logistic function is a good basic way to classify a binary outcome (e.g. 0 or 1), and hence makes for a good basic activation function within our artificial model for a neural network.
 
