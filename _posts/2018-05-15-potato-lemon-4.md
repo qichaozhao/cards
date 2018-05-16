@@ -10,7 +10,7 @@ img: 20180515/title.jpg
 
 1. [Logistic Activation Function](https://qichaozhao.github.io/potato-lemon-1/)
 2. [Neuron Weights](https://qichaozhao.github.io/potato-lemon-2/)
-3. [Abstractions](https://qichaozhao.github.io/potato-lemon-3/)
+3. [Layers and Networks](https://qichaozhao.github.io/potato-lemon-3/)
 
 ---
 
