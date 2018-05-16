@@ -62,17 +62,17 @@ For a multi class classification, i.e. `I > 2`, then we end up having one output
 
 For a binary classification though, we actually end up just using one output node to represent the two possible outcomes. If the output node is zero then that gives us the first class, and if the output node is one, then that gives us the second class. This results in a slightly different Average Cross Entropy equation that we can derive from the above.
 
-First, we set $$ I = 2 $$ and expand the summation term over `i`.
+First, we set $$ I = 2 $$ and expand the summation term over all $$ i $$.
 
 $$ loss = - \frac{1}{N} \sum_{n=0}^N y_{n1} log (\hat{y_{n1}}) + y_{2n} log (\hat{y_{2n}}) $$
 
 Next, we recognise that since we are using one output node to represent two states, the state $$ y_{2n} $$ can be re-written in terms of $$ y_{1n} $$. This is because if one state is 1, then the other must be 0.
 
-$$ y_{2n} = 1 - y_{1n} $$
+$$ y_{n2} = 1 - y_{n1} $$
 
 Now we can substitute this directly into the equation:
 
-$$ loss = - \frac{1}{N} \sum_{n=0}^N y_{1n} log (\hat{y_{1n}}) + (1 - y_{n1}) log (1 - \hat{y_{n1}}) \qquad (2) $$
+$$ loss = - \frac{1}{N} \sum_{n=0}^N y_{n1} log (\hat{y_{n1}}) + (1 - y_{n1}) log (1 - \hat{y_{n1}}) \qquad (2) $$
 
 And so we get our Average Binary Cross Entropy equation.
 
