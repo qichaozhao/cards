@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Potatolemon - Layers and Networks"
+title: "Potatolemon - Losses"
 date: 2018-05-16 12:00:00 +0000
 categories: open-source software
 img: 20180515/title.jpg
