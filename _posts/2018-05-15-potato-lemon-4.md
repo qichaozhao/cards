@@ -44,6 +44,8 @@ $$ loss = - \frac{1}{N} \sum_{n=0}^N \sum_{i=0}^I y_{ni} log (\hat{y_{ni}}) \qqu
 
 Although this seems more complicated than for our L1 loss, it is partly because we are firstly summing across all training examples and taking the average, and also because we have to deal with an arbitrary number of classes.
 
+So, why is cross entropy a better loss metric to use L1 loss?
+
 1. Cross Entropy loss penalises wrong classifications much more harshly than L1 loss.
 2. Cross Entropy loss results increases the effectiveness of training a neural network due to how the equation differentiates during backpropagation - it reduces the vanishing gradient problem compared to L1 loss.
 
