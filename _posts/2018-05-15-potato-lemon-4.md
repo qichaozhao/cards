@@ -68,7 +68,7 @@ For a binary classification though, we actually end up just using one output nod
 
 First, we set $$ I = 2 $$ and expand the summation term over all $$ i $$.
 
-$$ loss = - \frac{1}{N} \sum_{n=0}^N y_{n1} log (\hat{y_{n1}}) + y_{2n} log (\hat{y_{2n}}) $$
+$$ loss = - \frac{1}{N} \sum_{n=0}^N y_{n1} log (\hat{y_{n1}}) + y_{n2} log (\hat{y_{n2}}) $$
 
 Next, we recognise that since we are using one output node to represent two states, the state $$ y_{2n} $$ can be re-written in terms of $$ y_{1n} $$. This is because if one state is 1, then the other must be 0.
 
