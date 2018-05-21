@@ -180,7 +180,7 @@ class Network(object):
         raise NotImplementedError
 ```
 
-So, after this step we actually have what's known as a Multilayer Perceptron (which is a fancy name to say a Neural Network that can only do forward propagation).
+So, after this step we actually have what's known as a Multilayer Perceptron (which is a fancy name to say a Neural Network that is fully connected between all layers).
 
 If you are confused about what forward propagation means, it's very simple. It simply means to pass an input through the network and get the output out at the other end (this is as opposed to backwards propagation, which we'll tackle in a future blog post).
 

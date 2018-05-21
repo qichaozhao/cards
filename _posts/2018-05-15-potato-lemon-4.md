@@ -26,7 +26,7 @@ If we were to use this logistic function in a binary classification problem (i.e
 
 Let's say for example that if a picture is of a cat, we will give it class label = 1, and if it is not, then we will give it a class label = 0. Then, we run this example through our logistic function. The loss function would then be able to be written as follows:
 
-$$ loss = y_{true} - y_{pred} $$
+$$ J = y_{true} - y_{pred} $$
 
 - $$ y_{true} $$ is the label we have assigned (0 or 1)
 - $$ y_{pred} $$ is the output of the forward pass (a probability between 0 and 1)
@@ -35,7 +35,7 @@ This equation defines the absolute loss (also known as the L1 loss), and is one 
 
 This L1 loss however is not the best loss metric to use for a classification problem - for that there is something called Cross Entropy. The equation given for the Average Cross Entropy loss is as below:
 
-$$ loss = - \frac{1}{N} \sum_{n=0}^N \sum_{i=0}^I y_{ni} log (\hat{y_{ni}}) \qquad (1) $$
+$$ J = - \frac{1}{N} \sum_{n=0}^N \sum_{i=0}^I y_{ni} ln (\hat{y_{ni}}) \qquad (1) $$
 
 - $$ N $$ is the number of training examples.
 - $$ i $$ is a class that is being predicted (of a total $$ I $$ classes)
@@ -66,7 +66,7 @@ For a binary classification though, we actually end up just using one output nod
 
 First, we set $$ I = 2 $$ and expand the summation term over all $$ i $$.
 
-$$ loss = - \frac{1}{N} \sum_{n=0}^N y_{n1} log (\hat{y_{n1}}) + y_{2n} log (\hat{y_{2n}}) $$
+$$ J = - \frac{1}{N} \sum_{n=0}^N y_{n1} ln (\hat{y_{n1}}) + y_{2n} ln (\hat{y_{2n}}) $$
 
 Next, we recognise that since we are using one output node to represent two states, the state $$ y_{2n} $$ can be re-written in terms of $$ y_{1n} $$. This is because if one state is 1, then the other must be 0.
 
@@ -74,7 +74,7 @@ $$ y_{n2} = 1 - y_{n1} $$
 
 Now we can substitute this directly into the equation:
 
-$$ loss = - \frac{1}{N} \sum_{n=0}^N y_{n1} log (\hat{y_{n1}}) + (1 - y_{n1}) log (1 - \hat{y_{n1}}) \qquad (2) $$
+$$ J = - \frac{1}{N} \sum_{n=0}^N y_{n1} ln (\hat{y_{n1}}) + (1 - y_{n1}) ln (1 - \hat{y_{n1}}) \qquad (2) $$
 
 And so we get our Average Binary Cross Entropy equation.
 
