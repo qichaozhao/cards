@@ -16,17 +16,19 @@ img: 20180515/title.jpg
 
 # Losses
 
-Previously on potatolemon, we finished building out the abstractions for the layer and the network that we'll rely on in the future to actually use our network with. This brought us to a point where we have a Multilayer Perceptron (or, a Neural Network that only goes in one direction).
+Previously on potatolemon, we finished building out the abstractions for the layer and the network that we'll rely on in the future to interface with our neural network. This brought us to a point where we have a Multilayer Perceptron (or, a Neural Network that only goes in the forward direction).
 
-Today, we'll talk about and implement the first part of training a Neural Network - the losses - because the network needs to know how much it is  wrong by if it is to begin learning. Losses can also be called costs or errors, and a loss function can also be called a cost function or error function.
+Today, we'll talk about and implement the first part of training a Neural Network - the losses - because the network needs to know how much it is wrong by if it is to begin learning. Losses can also be called costs or errors, and a loss function can also be called a cost function or error function.
 
 To illustrate what we mean by a loss, let's think back to our logistic regression output from a few blog posts ago. Remember that for a single logistic function, we have a range of outputs between 0 and 1 (you can think of it as a range of probabilities that something might occur, but it's not quite that).
 
-If we were to use this logistic function in a binary classification problem (i.e. perhaps trying to decide whether a picture is a cat or not), then we could use our training examples to compare our logistic function output against a ground truth that we already know. In this scenario, the difference between the two would be our loss.
+If we were to use this logistic function in a binary classification problem (i.e. perhaps trying to decide whether a picture is of a cat or not), then we could use our training examples to compare our logistic function output against a ground truth that we already know. In this scenario, a simple way to calculate loss might be to take the difference between the two.
 
-Let's say for example that if a picture is of a cat, we will give it class label = 1, and if it is not, then we will give it a class label = 0. Then, we run this example through our logistic function. The loss function would then be able to be written as follows:
+Let's say for example that if a picture is of a cat, we will give it class label = 1, and if it is not, then we will give it a class label = 0. Then, we run this example through our logistic function. If we get a predicted cat probability of `0.7` but the picture is of a cat (ground truth = `1.0`), then our error in this case will be `1.0 - 0.7 = 0.3`.
 
-$$ J = y_{true} - y_{pred} $$
+Generalising this, we can define a simple loss function as follows:
+
+$$ loss = |y_{true} - y_{pred}| $$
 
 - $$ y_{true} $$ is the label we have assigned (0 or 1)
 - $$ y_{pred} $$ is the output of the forward pass (a probability between 0 and 1)
@@ -47,7 +49,7 @@ Although this seems more complicated than for our L1 loss, it is partly because 
 So, why is cross entropy a better loss metric to use L1 loss?
 
 1. Cross Entropy loss penalises wrong classifications much more harshly than L1 loss.
-2. Cross Entropy loss results increases the effectiveness of training a neural network due to how the equation differentiates during backpropagation - it reduces the vanishing gradient problem compared to L1 loss.
+2. Cross Entropy loss increases the effectiveness of training a neural network due to how the equation differentiates during backpropagation - it reduces the vanishing gradient problem compared to L1 loss.
 
 For proving point 1, we can take a look at the figure below, which plots 
  the Cross Entropy loss versus L1 loss for varying predictions vs a ground truth of 1.
@@ -66,7 +68,7 @@ For a binary classification though, we actually end up just using one output nod
 
 First, we set $$ I = 2 $$ and expand the summation term over all $$ i $$.
 
-$$ J = - \frac{1}{N} \sum_{n=0}^N y_{n1} ln (\hat{y_{n1}}) + y_{2n} ln (\hat{y_{2n}}) $$
+$$ loss = - \frac{1}{N} \sum_{n=0}^N y_{n1} log (\hat{y_{n1}}) + y_{n2} log (\hat{y_{n2}}) $$
 
 Next, we recognise that since we are using one output node to represent two states, the state $$ y_{2n} $$ can be re-written in terms of $$ y_{1n} $$. This is because if one state is 1, then the other must be 0.
 
