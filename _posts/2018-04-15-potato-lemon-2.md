@@ -36,6 +36,20 @@ Knowing that these are vectors, we can re-write using matrix multiplication as:
 
 $$ y = f(w^{T}.x + b) $$
 
+Extending this a little further - if we wanted to tackle multiple training examples at once, then we can simply stack each element in the equation and turn each of them into a matrix.
+
+This doesn't change the equation, which becomes (written in capitals as per matrix multiplication convention):
+
+$$ Y = f(W^{T}.X + b) $$
+
+But it means the quantities are now:
+
+1. $$ Y $$: the output of the neuron for each example, a vector of size (m, 1) where m is the number of examples.
+2. $$ f() $$: the activation function (the logistic function for now)
+3. $$ W $$: a matrix of weights applied to the input (shape of (1, x)) where x is the number of input nodes.
+4. $$ X $$: a matrix of inputs (shape of (x, m)) where m is the number of training examples and x is the number of input nodes.
+5. $$ b $$: a bias vector that allows the activation function to be fitted better to the data. It has shape (m, 1).
+
 So, after not much math-ing, we have the entire equation that describes the neuron. Now we can go ahead and implement it.
 
 # Implementation
@@ -48,7 +62,7 @@ The Neuron class.
 
 Holds its own weights and contains getters and setters for it.
 
-Also contains the fire function, used to "activate" the neuron.
+Also contains the forward function, used to "activate" the neuron.
 """
 
 import numpy as np
@@ -62,24 +76,26 @@ class Neuron(object):
     def __init__(self, num_inputs, activation=sigmoid):
 
         self.activation = activation
-        self.weights = np.random.rand(num_inputs, 1)
-        self.bias = np.zeros(num_inputs)
+        self.num_inputs = num_inputs
+        self.weights = np.random.randn(1, num_inputs) * 0.01
+        self.bias = 0
 
     def forward(self, input):
         """
-        In this function we implement the equation y = f(w^T . x + b)
+        In this function we implement the equation y = f(W.X + b)
 
-        :param input: a column vector of shape (m, 1)
-        :return: a column vector of shape (m, 1)
+        :param input: a column vector of length (i, m)
+            i: num weights, or rather the number of input nodes
+            m: num training examples
+        :return: a vector of shape (1, m) where m is the number of training examples
         """
-
-        return self.activation(np.dot(self.weights.T, input))
+        return self.activation(np.dot(self.weights, input) + self.bias)
 
     def get_weights(self):
         """
         Return the weights
 
-        :return:
+        :return: a weight vector of length num_inputs
         """
         return self.weights
 
@@ -89,7 +105,7 @@ class Neuron(object):
 
         :return:
         """
-        self.weights = weights
+        self.weights = weights.reshape(1, self.num_inputs)
 ```
 
 That's it for this post.

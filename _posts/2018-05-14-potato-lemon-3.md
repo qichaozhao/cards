@@ -41,7 +41,9 @@ class Layer(object):
     def __init__(self, size, num_inputs, type=Neuron, activation=sigmoid):
         """
         :param size: The number of neurons in the layer
-        :param num_inputs: The number of neurons or inputs in the previous layer
+        :param num_inputs: A matrix of shape (i, m).
+            - i is the number of neurons in the previous layer
+            - m is the number of training examples
         :type: The type of neuron to use
         """
 
@@ -61,15 +63,15 @@ class Layer(object):
 
         For each item in the list, the shape will be a vector of length self.num_inputs
 
-        Therefore, we should concatenate these weights together, so that the layer weights will be (self.num_inputs, self.size)
+        Therefore, we should concatenate these weights together, so that the layer weights will be (self.size, self.num_inputs)
 
         :return: A matrix of shape (self.num_inputs, self.size)
         """
 
-        weights = np.zeros((self.num_inputs, self.size))
+        weights = np.zeros((self.size, self.num_inputs))
 
         for idx, neuron in enumerate(self.neurons):
-            weights[:, idx] = neuron.get_weights()
+            weights[idx, :] = np.squeeze(neuron.get_weights())
 
         return weights
 
@@ -82,14 +84,15 @@ class Layer(object):
         """
 
         for idx, neuron in enumerate(self.neurons):
-            neuron.set_weights(weights[:, idx])
+            neuron.set_weights(weights[idx, :])
 
     def forward(self, input):
         """
         Performs a forward pass step, calculating the result of all neurons.
 
-        :param input: A vector of length self.num_inputs (from the previous layer or the overall input)
-        :return: A vector of length self.size (i.e. the result of the equation sigmoid(W^T.x + b))
+        :param input: A matrix of shape (self.num_inputs, t) (from the previous layer or the overall input)
+        :return: A vector of length (self.size, t) (i.e. the result of the equation sigmoid(W.X + b)).
+            t is the number of training examples
         """
 
         # In a more performant network, we should do a direct matrix multiplication for all Neurons
@@ -98,7 +101,7 @@ class Layer(object):
         for idx, neuron in enumerate(self.neurons):
             res.append(neuron.forward(input))
 
-        return np.asarray(res)
+        return np.vstack(res)
 ```
 
 Above the layer, we have the network. This is the highest level of abstraction we have, and provides an easy interface to the user for specifying a network architecture as well as implementing what's become a fairly standard set of functions for machine learning libraries nowadays - the `fit` and `predict` functions.
@@ -141,7 +144,7 @@ class Network(object):
         """
         The forward function which runs a forward pass on the entire network
 
-        :param input: A column vector of length input_dim
+        :param input: A matrix of shape (input_dim, training_examples)
         :return: A column vector representing the output of the final layer
         """
 

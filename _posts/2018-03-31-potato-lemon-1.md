@@ -68,12 +68,17 @@ def sigmoid(z):
     """
     This function implements the logistic function and returns the result. It can operate on vectors.
 
-    :param z: A scalar or vector (array of dimension (m, 1))
+    :param z: A matrix of dimension (i, m)
+        - i is the number of nodes
+        - m is the number of training examples
+
     :return: sigmoid(input)
     """
 
     return 1 / (1 + np.exp(-z))
 ```
+
+Note that in the code above, `m` is used to mean the number of training examples, not the gradient - this is just a convention thing that I've picked up and unfortunately it clashes when we talk about line gradients. In future posts, we will not refer to line gradients anymore so `m` will solely refer to the number of training examples.
 
 Note that `sigmoid` is just another name for the logistic function, and here we set `m=1` and `c=0` so the equation simplifies down.
 
