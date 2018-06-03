@@ -98,8 +98,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-06-03-potato-lemon-7.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <first_editor relative-caret-position="361">
+                <caret line="25" column="247" lean-forward="false" selection-start-line="25" selection-start-column="247" selection-end-line="25" selection-end-column="247" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -571,8 +571,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-06-03-potato-lemon-7.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <first_editor relative-caret-position="361">
+            <caret line="25" column="247" lean-forward="false" selection-start-line="25" selection-start-column="247" selection-end-line="25" selection-end-column="247" />
             <folding />
           </first_editor>
           <second_editor />

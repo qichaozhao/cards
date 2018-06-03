@@ -23,8 +23,9 @@ Since we have ostensibly a working network, it's time to put it to the test with
 
 So, in this post, we will look at a planar classification example which further tests our network in a binary classification setting.
 
-The problem we will use is to try and classify gaussian quantiles apart from one another. When plotted on a 2d plane, here is what our classification problem looks like:
+The problem we will use is to try and classify gaussian quantiles apart from one another. When plotted on a 2d plane, here is what our classification problem looks like - how can we draw a decision boundary so as to separate the red and blue dots?
 
+{: style="text-align:center"}
 ![Figure 1](/images/20180603/title.png)
 
 Again, this is a non-linear problem (similar to the XOR problem we faced last time), and so requires at least one hidden layer to solve. In this case, we just use a network with one hidden layer (that's 5 Neurons wide), to see if we can learn to classify these points.
