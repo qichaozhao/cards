@@ -37,12 +37,12 @@ This equation defines the absolute loss (also known as the L1 loss), and is one 
 
 This L1 loss however is not the best loss metric to use for a classification problem - for that there is something called Cross Entropy. The equation given for the Average Cross Entropy loss is as below:
 
-$$ J = - \frac{1}{N} \sum_{n=0}^N \sum_{i=0}^I y_{ni} ln (\hat{y_{ni}}) \qquad (1) $$
+$$ J = - \frac{1}{M} \sum_{m=0}^M \sum_{i=0}^I y_{mi} ln (\hat{y_{mi}}) \qquad (1) $$
 
-- $$ N $$ is the number of training examples.
+- $$ M $$ is the number of training examples.
 - $$ i $$ is a class that is being predicted (of a total $$ I $$ classes)
-- $$ y_{ni} $$ is the ground truth of class $$ i $$ for training example $$ n $$.
-- $$ \hat{y_{ni}} $$ is the predicted value of class $$ i $$ for training example $$ n $$.
+- $$ y_{mi} $$ is the ground truth of class $$ i $$ for training example $$ n $$.
+- $$ \hat{y_{mi}} $$ is the predicted value of class $$ i $$ for training example $$ n $$.
 
 Although this seems more complicated than for our L1 loss, it is partly because we are firstly summing across all training examples and taking the average, and also because we have to deal with an arbitrary number of classes.
 
@@ -68,15 +68,15 @@ For a binary classification though, we actually end up just using one output nod
 
 First, we set $$ I = 2 $$ and expand the summation term over all $$ i $$.
 
-$$ loss = - \frac{1}{N} \sum_{n=0}^N y_{n1} log (\hat{y_{n1}}) + y_{n2} log (\hat{y_{n2}}) $$
+$$ loss = - \frac{1}{M} \sum_{m=0}^M y_{m1} log (\hat{y_{m1}}) + y_{m2} log (\hat{y_{m2}}) $$
 
 Next, we recognise that since we are using one output node to represent two states, the state $$ y_{2n} $$ can be re-written in terms of $$ y_{1n} $$. This is because if one state is 1, then the other must be 0.
 
-$$ y_{n2} = 1 - y_{n1} $$
+$$ y_{m2} = 1 - y_{m1} $$
 
 Now we can substitute this directly into the equation:
 
-$$ J = - \frac{1}{N} \sum_{n=0}^N y_{n1} ln (\hat{y_{n1}}) + (1 - y_{n1}) ln (1 - \hat{y_{n1}}) \qquad (2) $$
+$$ J = - \frac{1}{M} \sum_{m=0}^M y_{m1} ln (\hat{y_{m1}}) + (1 - y_{m1}) ln (1 - \hat{y_{m1}}) \qquad (2) $$
 
 And so we get our Average Binary Cross Entropy equation.
 
@@ -94,18 +94,19 @@ def binary_crossentropy(pred, actual, epsilon=1e-15):
     """
     Calculates the cross entropy loss for a binary classification output (e.g. one output node).
 
-    :param pred: A vector value that is the output from the network of shape (1, training_examples)
-    :param actual: A vector value that is the ground truth of shape (1, training_examples)
-    :return: A vector value representing the binary_crossentropy loss of shape (1, training_examples)
+    :param pred: A vector value that is the output from the network of shape (1, m) where m is the number of training examples
+    :param actual: A vector value that is the ground truth of shape (1, m) where m is the number of training examples
+    :return: A vector value representing the binary_crossentropy loss of shape (1, m) where m is the number of training examples
     """
 
     # Here we offset zero and one values to avoid infinity when we take logs.
     pred[pred == 0] = epsilon
     pred[pred == 1] = 1 - epsilon
 
+    # m is the number of training examples in this case
     m = pred.shape[1]
-    J = -1 / m * np.sum(np.dot(actual, np.log(pred.T)) + np.dot((1 - actual), np.log((1 - pred).T)))
 
+    J = -1 / m * np.sum(np.dot(actual, np.log(pred.T)) + np.dot((1 - actual), np.log((1 - pred).T)))
     return J
 
 
@@ -113,9 +114,9 @@ def categorical_crossentropy(pred, actual, epsilon=1e-15):
     """
     Calculates the average entropy loss for a multi class classification output (e.g. multiple output node).
 
-    :param pred: A vector value that is the output from the network of shape (num_classes, training_examples)
-    :param actual: A vector value that is the ground truth of shape (num_classes, training_examples)
-    :return: A vector value representing the binary_crossentropy loss of shape (1, training_examples)
+    :param pred: A vector value that is the output from the network of shape (i, m) where i is the number of classes, and m is the number of training examples
+    :param actual: A vector value that is the ground truth of shape (i, m) where i is the number of classes, and m is the number of training examples
+    :return: A vector value representing the binary_crossentropy loss of shape (1, m) where i is the number of classes, and m is the number of training examples
     """
 
     # Here we offset zero and one values to avoid infinity when we take logs.

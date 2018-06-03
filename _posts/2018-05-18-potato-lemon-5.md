@@ -112,4 +112,3 @@ The answer is of course yes, and we will work through this in the next post in t
 See you in the next post!
 
 -qz
-
