@@ -99,6 +99,7 @@ In order to test drive our completed library, we can give it a small toy problem
 
 For the XOR gate, we have the truth table as below:
 
+{: style="text-align:center"}
 ![Figure 2](/images/20180524/figure_2_xor.jpg)
 
 So, we need to output 1 if A or B is 1, but 0 otherwise.
@@ -111,6 +112,7 @@ Another small detail here is that instead of using `sigmoid` activations for the
 
 After training for 25,000 epochs on the above truth table (which takes a snappy 4.77 seconds), the losses looked like this:
 
+{: style="text-align:center"}
 ![Figure 4](/images/20180524/figure_4_pytorch_costs.png)
 
 After training, the network was able to make the following predictions for the output of the truth table:
@@ -126,6 +128,7 @@ If you recall that our actual truth table is `0, 1, 1, 0`, this means the networ
 
 Next, we try using our potatolemon network implementing the exact same architecture, and training for 25,000 epochs also (which took a respectable 6.3 seconds). We get the following costs:
 
+{: style="text-align:center"}
 ![Figure 5](/images/20180524/figure_5_plnn_costs.png)
 
 After training, the network was able to make the following predictions:

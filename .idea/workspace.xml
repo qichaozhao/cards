@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8601ef47-54dd-4f28-b821-535c5bfd7852" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-05-24-potato-lemon-6.md" afterPath="$PROJECT_DIR$/_posts/2018-05-24-potato-lemon-6.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +85,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-05-24-potato-lemon-6.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="723">
-                <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+              <first_editor relative-caret-position="30">
+                <caret line="130" column="29" lean-forward="false" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -553,8 +552,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-05-24-potato-lemon-6.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="723">
-            <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <first_editor relative-caret-position="30">
+            <caret line="130" column="29" lean-forward="false" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
             <folding />
           </first_editor>
           <second_editor />
