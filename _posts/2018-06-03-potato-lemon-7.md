@@ -6,8 +6,6 @@ categories: open-source software
 img: 20180603/title.png
 ---
 
-This week, we continue with the cute but irrelevant title picture theme!
-
 ### Previously on Potatolemon...
 
 1. [Logistic Activation Function](https://qichaozhao.github.io/potato-lemon-1/)
