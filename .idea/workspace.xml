@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8601ef47-54dd-4f28-b821-535c5bfd7852" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-06-03-potato-lemon-7.md" afterPath="$PROJECT_DIR$/_posts/2018-06-03-potato-lemon-7.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.md" afterPath="$PROJECT_DIR$/about.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,12 +94,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-06-03-potato-lemon-7.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018-06-03-potato-lemon-7.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2018-06-03-potato-lemon-7.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="391">
                 <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/about.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="285">
+                <caret line="11" column="429" lean-forward="false" selection-start-line="11" selection-start-column="429" selection-end-line="11" selection-end-column="429" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -150,7 +163,6 @@
       <list>
         <option value="$PROJECT_DIR$/_posts/2017-07-06-how-computers-work.md" />
         <option value="$PROJECT_DIR$/_posts/2017-07-11-how-computers-work-2.md" />
-        <option value="$PROJECT_DIR$/about.md" />
         <option value="$PROJECT_DIR$/contact.md" />
         <option value="$PROJECT_DIR$/_posts/2018-02-10-authentication-proxy.md" />
         <option value="$PROJECT_DIR$/_posts/2017-05-19-text-understanding.md" />
@@ -166,6 +178,7 @@
         <option value="$PROJECT_DIR$/_posts/2018-05-15-potato-lemon-4.md" />
         <option value="$PROJECT_DIR$/_posts/2018-05-24-potato-lemon-6.md" />
         <option value="$PROJECT_DIR$/_posts/2018-06-03-potato-lemon-7.md" />
+        <option value="$PROJECT_DIR$/about.md" />
       </list>
     </option>
   </component>
@@ -217,11 +230,6 @@
               <item name="qichaozhao.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="qichaozhao.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qichaozhao.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qichaozhao.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -335,16 +343,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="430" lean-forward="false" selection-start-line="11" selection-start-column="430" selection-end-line="11" selection-end-column="430" />
           </first_editor>
           <second_editor />
         </state>
@@ -573,6 +571,17 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="391">
             <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="11" column="429" lean-forward="false" selection-start-line="11" selection-start-column="429" selection-end-line="11" selection-end-column="429" />
             <folding />
           </first_editor>
           <second_editor />
