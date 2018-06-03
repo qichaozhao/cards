@@ -145,8 +145,9 @@ However, having said that, neural networks in general can be very susceptible to
 
 In the next post, we'll continue to explore the performance characteristics of this library, with the aim of proving it on the MNIST handwriting dataset.
 
-The code for the tests above can be found at: [https://github.com/qichaozhao/potatolemon](https://github.com/qichaozhao/potatolemon)
+The code for the tests above can be found at: [https://github.com/qichaozhao/potatolemon/blob/master/examples/xor_validation.ipynbb](https://github.com/qichaozhao/potatolemon/blob/master/examples/xor_validation.ipynb)
 
+---
 
 All the rest of the code can be found on the github project: [https://github.com/qichaozhao/potatolemon](https://github.com/qichaozhao/potatolemon)
 
