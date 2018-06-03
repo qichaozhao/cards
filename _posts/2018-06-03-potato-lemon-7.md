@@ -17,9 +17,11 @@ img: 20180603/title.png
 
 ---
 
+Previously on potatolemon, we finished off deriving the formulas behind backpropagation and implemented it all, and then we did a lot of testing and a lot of bug hunting, and then we validated our network on a small toy problem (learning the XOR gate).
+
 # Planar Classification
 
-Since we have ostensibly a working network, it's time to put it to the test with a further toy problem to learn!
+Since we now have ostensibly a working network, it's time to put it to the test with a further toy problem to learn!
 
 So, in this post, we will look at a planar classification example which further tests our network in a binary classification setting.
 
