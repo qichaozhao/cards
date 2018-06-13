@@ -60,7 +60,7 @@ Aside from the result accuracy, the network took nearly twice as long as the pyT
 
 These two minor points aside, the results of this test by and large are another validation of our network and the fact that it has been implemented correctly! Huzzah!
 
-In the next post, we'll make a proper test of our network on the current hello world of neural network problems, the MNIST handwriting classification problem.
+In the next post, we'll look at multiclass classification and see how well our network handles that!
 
 The code for the tests above can be found at: [https://github.com/qichaozhao/potatolemon/blob/master/examples/planar_classification.ipynb](https://github.com/qichaozhao/potatolemon/blob/master/examples/planar_classification.ipynb)
 
