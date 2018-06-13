@@ -24,7 +24,7 @@ Previously on potatolemon, we continued testing our neural network by running it
 
 Now, we perform the final testing on our library to see if it can also learn a multiclass classification problem!
 
-In this post, we look at the classic Iris dataset that can be loaded directly from sklearn libraries. This is a multiclass classification problem - the aim being to learn to classify 3 different iris flower species based on 4 different features.
+In this post, we look at the classic Iris dataset that can be loaded directly from the `sklearn` library. This is a multiclass classification problem - the aim being to learn to classify 3 different iris flower species based on 4 different features.
 
 We first use our reference library (pyTorch) to train a network.
 
