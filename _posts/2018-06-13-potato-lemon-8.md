@@ -48,7 +48,7 @@ This looks more or less okay - the confusion matrix tells us that the network ca
 avg / total       0.84      0.75      0.71        20
 ```
 
-An overall F1-score of 0.71 is again pretty average, but using such a small network is not too bad, although it is significaly worse than an out of the box random forest classifier (which scores 0.84).
+An overall F1-score of 0.71 is pretty average, and it is significantly worse than an out of the box random forest classifier (which scores 0.84).
 
 However, the point here is not to completely smash the prediction problem (which we could do if we used a bigger/deeper network), but to see how our potatolemon library stacks up.
 
