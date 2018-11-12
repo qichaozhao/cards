@@ -51,7 +51,7 @@ We can re-write these equations using the chain rule. For equation `(1)` this be
 
 $$ \frac{\partial J}{\partial W^{l}} = \frac{1}{M} \left( \frac{\partial J}{\partial Z^{l}} . (A^{l-1})^{T} \right) \qquad (3) $$
 
-Note $$ M $$ in this case indicates the number of training examples we have.
+Note $$ M $$ in this case indicates the number of training examples we have. This has been added for completeness-sake. When going through the derivations for the first time you can set M = 1 and treat it as if taking one input at a time.
 
 Using the chain rule again, we can re-write $$ \frac{\partial J}{\partial Z^{l}} $$ as:
 
@@ -59,9 +59,11 @@ $$ \frac{\partial J}{\partial Z^{l}} = \sigma(Z_{j}^{l})(1 - \sigma(Z_{j}^{l})) 
 
 How does this help? Well, we realise that the first part of this equation is purely dependent on our input, and the second part comes from the backpropagation input into the neuron, and can be written as:
 
-$$ \frac{\partial J}{\partial A^{l}} = \sum_{k=0}^{K} p_{k}^{l+1} \qquad (5) $$
+$$ \frac{\partial J}{\partial P^{l+1}} = \sum_{k=0}^{K} p_{k}^{l+1} \qquad (5) $$
 
-Using equations `(4)` and `(5)`, we can now write an equation for `(1)` in terms of known quantities, and that covers our weight updates!
+Substituting equation `(5)` into `(4)` and then the result into equation `(3)`, we can now write an equation for `(1)` in terms of known quantities, and that covers our weight updates!
+
+We won't write the full equation out, because when we come to code it, we will (for the purposes of readability) calculate equation `(4)` first, then use that in equation `(3)`. Note we don't actually need to calculate equation `(5)`, since it is the backpropagation input into the neuron, we will have that to hand.
 
 We follow a similar logic for deriving the bias update, to achieve the bias update equation:
 
@@ -69,7 +71,7 @@ $$ \frac{\partial J}{\partial b^{l}} = \frac{1}{M} \sum_{m=0}^{M} \frac{\partial
 
 With these equations, we can now perform the update operations for our neuron parameters, but, we must make sure that backpropagation can continue past this neuron as well, thus we must make one final calculation which will provide the $$ l-1 $$ th layer with the requisite input necessary for them to do backpropagation. This quantity is:
 
-$$ \frac{\partial J}{\partial A^{l-1}} = (W^{l})^{T} . \frac{\partial J}{\partial Z^{l}} \qquad (7) $$
+$$ \frac{\partial J}{\partial P^{l}} = (W^{l})^{T} . \frac{\partial J}{\partial Z^{l}} \qquad (7) $$
 
 Luckily, this is quite easy as we already have the equation for $$ \frac{\partial J}{\partial Z^{l}} $$, it is equation `(4)` which we derived earlier!
 
@@ -146,7 +148,7 @@ Although this is very positive news, through testing I have noticed that my libr
 
 However, having said that, neural networks in general can be very susceptible to initalialisation and it can make the difference between learning and not learning. This is especially true when the network is small, as it then becomes more likely to fall into local minima.
 
-In the next post, we'll continue to explore the performance characteristics of this library, with the aim of proving it on the MNIST handwriting dataset.
+In the next post, we'll continue to explore the performance characteristics of this library.
 
 The code for the tests above can be found at: [https://github.com/qichaozhao/potatolemon/blob/master/examples/xor_validation.ipynb](https://github.com/qichaozhao/potatolemon/blob/master/examples/xor_validation.ipynb)
 
