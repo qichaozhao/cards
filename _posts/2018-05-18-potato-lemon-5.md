@@ -35,7 +35,7 @@ If we take the neuron above, which has two input weights and one output, and fin
 
 If the two contributions from the inputs multiplied by the weights to the neuron were equal, then it might make sense to assign blame to the weights in a 50/50 way as well. However, if this is not the case, then we need to assign blame in proportion to the contribution.
 
-Mathematically speaking, we want to calculate a relationship between the change in the loss function and the change in our neuron weights. Mathematically speaking, we want to know for this particular neuron the two following things:
+Mathematically speaking, we want to calculate a relationship between the change in the loss function and the change in our neuron weights, which means we want to know for this particular neuron the two following things:
 
 $$ \frac{\partial J}{\partial w_{1}} \qquad (1) $$
 
