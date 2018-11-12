@@ -63,7 +63,7 @@ $$ \hat{y} = \frac{1}{1 + e^{-(W^{T}.X + b)}} \qquad (5) $$
 
 With these two equations (`(4)` and `(5)`), we can now calculate our two terms in the equation `(1)`. Let's do the differentiation steps together. First, for $$ \frac{\partial J}{\partial \hat{y}} $$.
 
-$$ \frac{\partial J}{\partial \hat{y}} = - \frac{y}{\hat{y}} - \frac{1 - y}{1 - \hat{y}} $$
+$$ \frac{\partial J}{\partial \hat{y}} = - \left(\frac{y}{\hat{y}} - \frac{1 - y}{1 - \hat{y}} \right) $$
 
 Re-writing the above equation, we get:
 

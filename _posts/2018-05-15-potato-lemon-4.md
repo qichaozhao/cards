@@ -26,9 +26,9 @@ If we were to use this logistic function in a binary classification problem (i.e
 
 Let's say for example that if a picture is of a cat, we will give it class label = 1, and if it is not, then we will give it a class label = 0. Then, we run this example through our logistic function. If we get a predicted cat probability of `0.7` but the picture is of a cat (ground truth = `1.0`), then our error in this case will be `1.0 - 0.7 = 0.3`.
 
-Generalising this, we can define a simple loss function as follows:
+Generalising this, we can define a simple loss function `J` as follows:
 
-$$ loss = |y_{true} - y_{pred}| $$
+$$ J = |y_{true} - y_{pred}| $$
 
 - $$ y_{true} $$ is the label we have assigned (0 or 1)
 - $$ y_{pred} $$ is the output of the forward pass (a probability between 0 and 1)
@@ -37,7 +37,7 @@ This equation defines the absolute loss (also known as the L1 loss), and is one 
 
 This L1 loss however is not the best loss metric to use for a classification problem - for that there is something called Cross Entropy. The equation given for the Average Cross Entropy loss is as below:
 
-$$ J = - \frac{1}{M} \sum_{m=0}^M \sum_{i=0}^I y_{mi} ln (\hat{y_{mi}}) \qquad (1) $$
+$$ J = - \frac{1}{M} \sum_{m=0}^M \sum_{i=1}^I y_{mi} ln (\hat{y_{mi}}) \qquad (1) $$
 
 - $$ M $$ is the number of training examples.
 - $$ i $$ is a class that is being predicted (of a total $$ I $$ classes)
@@ -68,9 +68,9 @@ For a binary classification though, we actually end up just using one output nod
 
 First, we set $$ I = 2 $$ and expand the summation term over all $$ i $$.
 
-$$ loss = - \frac{1}{M} \sum_{m=0}^M y_{m1} log (\hat{y_{m1}}) + y_{m2} log (\hat{y_{m2}}) $$
+$$ J = - \frac{1}{M} \sum_{m=0}^M y_{m1} log (\hat{y_{m1}}) + y_{m2} log (\hat{y_{m2}}) $$
 
-Next, we recognise that since we are using one output node to represent two states, the state $$ y_{2n} $$ can be re-written in terms of $$ y_{1n} $$. This is because if one state is 1, then the other must be 0.
+Next, we recognise that since we are using one output node to represent two states, the state $$ y_{m2} $$ can be re-written in terms of $$ y_{m1} $$. This is because if one state is 1, then the other must be 0.
 
 $$ y_{m2} = 1 - y_{m1} $$
 
