@@ -71,7 +71,7 @@ $$ \frac{\partial J}{\partial b^{l}} = \frac{1}{M} \sum_{m=0}^{M} \frac{\partial
 
 With these equations, we can now perform the update operations for our neuron parameters, but, we must make sure that backpropagation can continue past this neuron as well, thus we must make one final calculation which will provide the $$ l-1 $$ th layer with the requisite input necessary for them to do backpropagation. This quantity is:
 
-$$ \frac{\partial J}{\partial P^{l}} = (W^{l})^{T} . \frac{\partial J}{\partial Z^{l}} \qquad (7) $$
+$$ \frac{\partial J}{\partial P^{l}} = \frac{\partial J}{\partial A^{l-1}} = (W^{l})^{T} . \frac{\partial J}{\partial Z^{l}} \qquad (7) $$
 
 Luckily, this is quite easy as we already have the equation for $$ \frac{\partial J}{\partial Z^{l}} $$, it is equation `(4)` which we derived earlier!
 
