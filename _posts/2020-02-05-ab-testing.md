@@ -37,7 +37,7 @@ As you can probably intuit, this kind of experimental setup will naturally contr
 
 To put the above into a slightly more rigorous words, what we're looking to do is test whether our treatment results in a statistically significant effect compared to our control.
 
-We define our Null Hypothesis $ H_{0} $ as: the new landing page did not increase click through rates.
+We define our Null Hypothesis $$ H_{0} $$ as: the new landing page did not increase click through rates.
 
 We perform the A/B test to see if we can disprove this hypothesis.
 
